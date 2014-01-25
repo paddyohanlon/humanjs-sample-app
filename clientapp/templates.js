@@ -12,7 +12,7 @@ exports.pages = {};
 exports.body = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<body><div class="container"><div class="navbar"><div class="navbar-inner"><a href="#" class="brand">Human JavaScript Sample</a><ul class="nav"><li><a href="/">home</a></li><li><a href="/collections">collection demo</a></li><li><a href="/info">more info</a></li></ul></div></div><main id="pages"></main></div></body>');
+        buf.push('<body><div class="container"><div class="navbar"><div class="navbar-inner"><a href="#" class="brand">Human JavaScript Sample</a><ul class="nav"><li><a href="/">home</a></li><li><a href="/collections">collection demo</a></li><li><a href="/info">more info</a></li><li><a href="/budget">budget</a></li></ul></div></div><main id="pages"></main></div></body>');
     }
     return buf.join("");
 };
@@ -31,6 +31,15 @@ exports.includes.person = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
         buf.push('<li class="person"><img width="40" height="40" class="avatar"/><span class="name"></span><span> <a href="#" class="delete">delete</a></span></li>');
+    }
+    return buf.join("");
+};
+
+// budget.jade compiled template
+exports.pages.budget = function anonymous(locals) {
+    var buf = [];
+    with (locals || {}) {
+        buf.push('<section class="page pageTwo"><h2>Budget</h2><p>This is the main budget page.</p></section>');
     }
     return buf.join("");
 };

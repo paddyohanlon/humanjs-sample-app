@@ -2,8 +2,7 @@ var PageView = require('./base');
 var templates = require('../templates');
 
 module.exports = PageView.extend({
-    title: 'home',
-    template: templates.pages.home,
+    template: templates.pages.budget,
     render: function () {
         this.renderAndBind();
     }
